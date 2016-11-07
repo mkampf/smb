@@ -1,0 +1,66 @@
+<?php
+
+require 'vendor/autoload.php';
+require 'php/classes/class.smbserver.php';
+require 'php/classes/class.file.php';
+require 'php/classes/class.folder.php';
+require 'php/functions.php';
+
+use VeliaSMB\SmbServer;
+use VeliaSMB\File;
+use VeliaSMB\Folder;
+/**
+ * Autoload geht nicht, vgl. composer.json
+ */
+
+
+function printServerList($file)
+{	
+	$i=0;
+    $serverArray = json_decode(file_get_contents($file));
+  
+    foreach ($serverArray as $server) {
+    	if(is_array($server)){
+
+    		$id = $server[0];
+    		$shortcode = preg_replace('/[0-9]+/', '', $id);
+    		$location = $server[1];
+
+    		if($i === 0){
+	    		echo ('<li role="presentation" class="active">
+	    				<a href="#'.$id.'" data-toggle="tab" id="'.$id.'">'.$shortcode.' '.$location.'</a>
+	    			   </li>');
+	    	}else{
+	    		echo ('<li role="presentation">
+	    				<a href="#'.$id.'" data-toggle="tab" id="'.$id.'">'.$shortcode.' '.$location.'</a>
+	    			   </li>');	    		
+	    	}
+	    	$i++;
+    	}      
+    }  
+}
+
+
+
+
+
+$loader = new Twig_Loader_Filesystem('templates');
+$twig = new Twig_Environment($loader);
+
+
+printServerList("serverlist.json");
+
+
+$file = new File("42", "blub.iso", "server1", "/ISO/bla");
+$server = new SmbServer("AT1", "Wien", "111.222.111.1", "smb.vienna.at", "/ISO");
+$folder = new Folder("AT1", "Wien", "111.222.111.1", "smb.vienna.at", "/ISO", "adsjkhsa", "1");
+
+
+
+
+echo $twig->render('index.twig', array(
+
+	'firstname' => 'Max',
+	'lastname' => 'Mustermann'
+
+));

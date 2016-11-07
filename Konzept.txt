@@ -1,0 +1,31 @@
+Ablauf:
+
+1.	Serverauswahl: 
+
+	onClick Ajax request{
+
+		new SmbServer()
+
+		SmbServer->crawl()
+			if(is_Folder){
+				new Folder()
+			}else if(is_File){
+				new File()
+			}
+
+		if(level = 0){
+			printToSidebar(Folder)
+		}else if(level >1){
+			printToFileArea(Folder&File)
+		}
+	}
+
+2.	Klick auf File/Folder
+
+		if(is_File){
+			open Popup (JQuery)
+		}else if(is_Folder){
+			show/hide Div (JQuery)
+		}
+
+

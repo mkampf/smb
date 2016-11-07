@@ -2,7 +2,13 @@
 <html lang="en">
 <?php 
     include('php/functions.php');
-    include('php/classes/class.SmbServer.php');
+    include('php/classes/class.smbserver.php');
+    include('php/classes/class.file.php');
+    include('php/classes/class.folder.php');
+
+    use VeliaSMB\SmbServer;
+    use VeliaSMB\File;
+    use VeliaSMB\Folder;
 
     $baseDir = "./ISOs";
 
@@ -59,6 +65,7 @@
 
         <div class="row divider-row">
             <div class="col-lg-12 text-center"></div>
+
         </div>
         <!-- /.row -->
 
@@ -73,6 +80,7 @@
 
                    $subDirs = scanBaseDir($baseDir);
                    printBaseDir($subDirs);
+
                 ?>                          
                 </ul>
             </div>
@@ -93,7 +101,7 @@
                 <tbody>
                     <tr>
                         <td><label for="sharehost">Share host</label></td>
-                        <td><input type="text" name="sharehost" value="85.195.124.157" readonly /></td>
+                        <td><input type="text" name="sharehost" value="123.123.123.123" readonly /></td>
                     </tr>
                     <tr>
                         <td><label for="path">Path to image</label></td>

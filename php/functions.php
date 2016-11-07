@@ -111,14 +111,15 @@ function printServerList($file)
     		$id = $server[0];
     		$shortcode = preg_replace('/[0-9]+/', '', $id);
     		$location = $server[1];
+    		$hostaddress = $server[3];
 
     		if($i === 0){
 	    		echo ('<li role="presentation" class="active">
-	    				<a href="#'.$id.'" data-toggle="tab" id="'.$id.'">'.$shortcode.' '.$location.'</a>
+	    				<a href="#'.$hostaddress.'" data-toggle="tab" id="'.$id.'">'.$shortcode.' '.$location.'</a>
 	    			   </li>');
 	    	}else{
 	    		echo ('<li role="presentation">
-	    				<a href="#'.$id.'" data-toggle="tab" id="'.$id.'">'.$shortcode.' '.$location.'</a>
+	    				<a href="#'.$hostaddress.'" data-toggle="tab" id="'.$id.'">'.$shortcode.' '.$location.'</a>
 	    			   </li>');	    		
 	    	}
 	    	$i++;
