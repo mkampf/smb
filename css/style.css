@@ -1,0 +1,45 @@
+.location-select{
+    float: left;
+}
+
+.location-select.nav-pills li{
+    margin-top: 10px;
+}
+
+.location-select::before {
+	margin: 30px 0 0 5px;
+	float: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Choose server location";
+	position: relative;
+	bottom: 10px;    
+}
+
+.divider-row{
+	border-top: 1px #CCC solid;
+	margin: 50px 20px;
+}
+
+.base-Dir-select li.active > a, 
+.base-Dir-select li.active > a:hover, 
+.base-Dir-select li.active > a:focus {
+	background-color: #215989;
+	color: #fff;
+}
+
+#iso-dialog table{
+	width: 100%;
+}
+
+#iso-dialog label, #iso-dialog input {
+	width: 100%;
+}
+
+#iso-dialog label{
+	text-align: right;
+	padding-right: 20px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Velia.net SMB-Server</title>
+
+    <!-- JQuery UI CSS -->
+    <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" >
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">    
+
+
+</head>
+
+<body>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Velia.net SMB-Server</h1>
+                <p class="lead">ISO files to mount via IPMI</p>
+             </div>
+        </div>
+        <!-- /.row -->
+                       
+        <div class="row">
+            <div class="col-lg-12 text-left location-select">
+                <ul class="nav nav-pills">
+                  <li role="presentation" class="active"><a href="#DE1" data-toggle="tab" id="DE1">DE Frankfurt</a></li>
+                  <li role="presentation"><a href="#FR1" data-toggle="tab" id="FR1">FR Strasbourg</a></li>
+                  <li role="presentation"><a href="#US1" data-toggle="tab" id="US1">US Miami</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row divider-row">
+            <div class="col-lg-12 text-center"></div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-xs-4 text-left base-folder-select">
+                <ul class="nav nav-tabs nav-stacked">
+                  <li class="active"><a data-toggle="tab" href="#drivers">Drivers</a></li>
+                  <li><a data-toggle="tab" href="#ipmi">IPMI</a></li>
+                  <li><a data-toggle="tab" href="#os">OS</a></li>
+                  <li><a data-toggle="tab" href="#preseed">Preseed</a></li>
+                  <li><a data-toggle="tab" href="#tools">Tools</a></li>              
+                </ul>
+            </div>
+            <div class="col-md-8 text-left tab-content">
+
+              <div id="drivers" class="tab-pane fade in active">
+                <p><a href="#" class="iso-link">broadwell2012r2.iso (137M) | 01-Oct-2016 14:40   </a></p>
+                <p><a href="#" class="iso-link">win2k3_lan_drivers_haswell.iso (38M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">windows_drivers_10_16.iso (434M) | 05-Oct-2016 19:26</a></p>
+                <p><a href="#" class="iso-link">usw. usf.</a></p>                 
+              </div>
+
+              <div id="ipmi" class="tab-pane fade">
+                <p><a href="#" class="iso-link">Erstes-IPMI-ISO.iso (666M) | 01-Oct-2016 14:40   </a></p>
+                <p><a href="#" class="iso-link">zweites-IPMI-ISO.iso (38M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">Drittes-IPMI-ISO.iso (434M) | 05-Oct-2016 19:26</a></p> 
+                <p><a href="#" class="iso-link">viertes-IPMI-ISO.iso (38M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">Fünftes-IPMI-ISO.iso (434M) | 05-Oct-2016 19:26</a></p>
+                <p><a href="#" class="iso-link">usw. usf.</a></p>
+              </div> 
+
+
+              <!-- UNTERKATEGORIEN FÜR UBUNTU, DEBIAN, CENTOS EINFUEGEN!! -->
+              <div id="os" class="tab-pane fade">
+                <p><a href="#" class="iso-link">Centos-7.1.2.3.iso (666M) | 01-Oct-2016 14:40   </a></p>
+                <p><a href="#" class="iso-link">Ubuntu-16.69-Precise.iso (398M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">Debian-Jessie.iso (434M) | 05-Oct-2016 19:26</a></p> 
+                <p><a href="#" class="iso-link">archlinux-2016.08.01-dual.iso (385M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">XenServer-7.0.0-main.iso (743M) | 05-Oct-2016 19:26</a></p>
+                <p><a href="#" class="iso-link">usw. usf.</a></p>
+              </div>                  
+              <!-- UNTERKATEGORIEN FÜR UBUNTU, DEBIAN, CENTOS EINFUEGEN!! -->
+
+              <div id="preseed" class="tab-pane fade">
+                <p><a href="#" class="iso-link">custom-centos7.iso (666M) | 01-Oct-2016 14:40   </a></p>
+                <p><a href="#" class="iso-link">debian-7-raid-bios.iso (438M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">ubuntu-12.04.5-efi-ohnepart.iso (434M) | 05-Oct-2016 19:26</a></p> 
+                <p><a href="#" class="iso-link">ubuntu-1404-raid1-uefi.iso (238M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">usw. usf.</a></p>
+              </div>     
+
+              <div id="tools" class="tab-pane fade">
+                <p><a href="#" class="iso-link">Memtest86-6.1.0.iso (13M) | 01-Oct-2016 14:40   </a></p>
+                <p><a href="#" class="iso-link">dban.iso (38M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">dban_non_autonuke.iso (434M) | 05-Oct-2016 19:26</a></p> 
+                <p><a href="#" class="iso-link">freedos11src.iso (38M) | 07-Apr-2016 21:12</a></p>
+                <p><a href="#" class="iso-link">gparted-live-0.26.1-5-amd64.iso (M) | 05-Oct-2016 19:26</a></p>
+                <p><a href="#" class="iso-link">usw. usf.</a></p>
+              </div>                                  
+
+            </div>  
+                 
+        </div>
+        <!-- /.row -->
+
+
+        <div id="iso-dialog" title="Path to ISO">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="sharehost">Share host</label></td>
+                        <td><input type="text" name="sharehost" value="85.195.124.157" readonly /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="path">Path to image</label></td>
+                        <td><input type="text" name="path" value="\ISO\drivers\broadwell2012r2.iso" readonly /></td>
+                    </tr>
+                </tbody>
+            </table>     
+        </div>
+        <!-- /.iso-dialog -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 3.1.1 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- jQuery UI Version 1.13.1 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to open the dialog -->
+    <script src="js/iso-dialog.js"></script>    
+
+</body>
+
+</html>
